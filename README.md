@@ -14,5 +14,5 @@ Clone the repo to the `pack/vendor/start/vim-MdToPdf` directory in your `.vim` f
 
 ## Configuration
 The plugin provides two global variables that you can redefine in your `.vimrc` file:
-- `g:vim_mdtopdf_cssurl`: Used to define a custom path or URL for custom CSS (uses my own personal CSS file by default, which is a slight modification of Microsoft's CSS which is used for Markdown in VS Code).
+- `g:vim_mdtopdf_cssurl`: Used to define a custom path or URL for custom CSS (uses my own personal CSS file by default, which is a slight modification of the CSS that Microsoft uses for Markdown in VS Code).
 - `g:vim_mdtopdf_papersize`: Used to set a custom paper size (Letter by default).
