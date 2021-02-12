@@ -1,0 +1,22 @@
+@import "markdown.css";
+@import "highlight.css";
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+
+html, body {
+	font-size: var(--markdown-font-size, 21px);
+}
+
+#code-csp-warning {
+	font-size: 18px;
+}
+
+code {
+	font-size: 1.5em;
+}
