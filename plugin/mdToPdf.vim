@@ -3,7 +3,7 @@ if !exists("g:vim_mdtopdf_cssurl")
     let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf/style/md-style.css"
 endif
 
-if !exists("vim_mdtopdf_papersize")
+if !exists("g:vim_mdtopdf_papersize")
     let g:vim_mdtopdf_papersize = "letter"
 endif
 
