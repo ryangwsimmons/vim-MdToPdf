@@ -8,7 +8,9 @@ if !exists("g:vim_mdtopdf_papersize")
 endif
 
 function! MdToPdf()
+    lcd %:p:h
     execute "Pandoc html
+        \ --pdf-engine-opt=\"--enable-local-file-access\"
 		\ --css ". g:vim_mdtopdf_cssurl. "
 		\ --katex https://cdn.jsdelivr.net/npm/katex@latest/dist/
 		\ -V margin-top=0.5in -V margin-bottom=0.5in -V margin-left=0.5in -V margin-right=0.5in
