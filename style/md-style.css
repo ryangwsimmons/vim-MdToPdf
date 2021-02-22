@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css");
 @import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css");
 
+/*Increased font size so that PDFs are a little easier to read*/
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
 	font-size: 14px;
@@ -19,4 +20,10 @@ html, body {
 
 code {
 	font-size: 1.5em;
+}
+
+/*For some unknown reason, wkhtmltopdf creates PDFs with tiny images unless you explicitly set the image size*/
+img {
+    min-width: 100%;
+    min-height: 100%;
 }
