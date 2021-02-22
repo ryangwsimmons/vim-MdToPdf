@@ -25,5 +25,7 @@ code {
 /*For some unknown reason, wkhtmltopdf creates PDFs with tiny images unless you explicitly set the image size*/
 img {
     min-width: 100%;
+    max-width: 100%;
     min-height: 100%;
+    max-height: 100%;
 }
