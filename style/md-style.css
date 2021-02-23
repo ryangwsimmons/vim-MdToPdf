@@ -21,3 +21,8 @@ html, body {
 code {
 	font-size: 1.5em;
 }
+
+img {
+    max-height: initial;
+    max-width: initial;
+}
