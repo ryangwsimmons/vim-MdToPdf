@@ -14,10 +14,10 @@ function! MdToPdf()
         \ --standalone
         \ --pdf-engine-opt=\"--enable-local-file-access\"
 		\ --css ". g:vim_mdtopdf_cssurl. "
-		\ -H https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/html-includes/includes.html
+		\ -H https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/html-includes/includes2.html
 		\ -V margin-top=0.5in -V margin-bottom=0.5in -V margin-left=0.5in -V margin-right=0.5in
 		\ -V papersize=". g:vim_mdtopdf_papersize. "
-		\ -o '". shellescape(expand("%:r"). ".html"). "'"
+		\ -o '". shellescape(expand("%:r"). ".pdf"). "'"
 endfunction
 
 command MdToPdf call MdToPdf()
