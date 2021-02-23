@@ -10,6 +10,7 @@ endif
 function! MdToPdf()
     lcd %:p:h
     execute "Pandoc html
+        \ -f gfm
         \ --standalone
         \ --pdf-engine-opt=\"--enable-local-file-access\"
 		\ --css ". g:vim_mdtopdf_cssurl. "
