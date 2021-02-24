@@ -2,5 +2,6 @@
 @import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css");
 
 @page {
+    size: letter;
     margin: 0.5in;
 }

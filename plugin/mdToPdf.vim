@@ -1,6 +1,6 @@
 " Define plugin default values, if not re-defined by user
 if !exists("g:vim_mdtopdf_cssurl")
-    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/mdstyle.css"
+    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/style.css"
 endif
 
 if !exists("g:vim_mdtopdf_papersize")
@@ -18,7 +18,7 @@ function! MdToPdf()
     lcd %:p:h
     execute "Pandoc html
         \ --standalone
-		\ --css ". g:vim_mdtopdf_cssurl. "
+        \ --css ". g:vim_mdtopdf_cssurl. "
         \ --katex https://cdn.jsdelivr.net/npm/katex@latest/dist/
 		\ -o '". shellescape(expand("%:r"). ".html"). "'"
 
@@ -29,14 +29,13 @@ from pyppeteer import launch
 import os
 import vim
 from weasyprint import HTML
-from weasyprint.fonts import FontConfiguration
 
 async def main():
     browser = await launch()
     doc = await browser.newPage()
     await doc.goto("file://" + vim.eval("expand('%:p:r')") + ".html")
     html = await doc.content()
-    HTML(string = html).write_pdf(vim.eval("expand('%:p:r')") + ".pdf", stylesheets = [CSS(string = '@page { size: ' + vim.eval("echo g:vim_mdtopdf_papersize") + '; }')], font_config = FontConfiguration())
+    HTML(string = html).write_pdf(vim.eval("expand('%:p:r')") + ".pdf")
     os.remove(vim.eval("expand('%:p:r')") + ".html")
     await browser.close()
 
