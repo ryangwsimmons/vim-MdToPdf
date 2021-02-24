@@ -1,6 +1,6 @@
 " Define plugin default values, if not re-defined by user
 if !exists("g:vim_mdtopdf_cssurl")
-    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/style.css"
+    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/styles.css"
 endif
 
 if !exists("g:vim_mdtopdf_papersize")
