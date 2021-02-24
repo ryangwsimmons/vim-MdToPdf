@@ -1,10 +1,10 @@
 " Define plugin default values, if not re-defined by user
 if !exists("g:vim_mdtopdf_cssurl")
-    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/md_style.css"
+    let g:vim_mdtopdf_cssurl = "https://cdn.jsdelivr.net/gh/ryangwsimmons/vim-MdToPdf@master/style/mdstyle.css"
 endif
 
 if !exists("g:vim_mdtopdf_papersize")
-    let g:vim_mdtopdf_papersize = "letter"
+    let g:vim_mdtopdf_papersize = "Letter"
 endif
 
 function! MdToPdf()
@@ -29,13 +29,14 @@ from pyppeteer import launch
 import os
 import vim
 from weasyprint import HTML
+from weasyprint.fonts import FontConfiguration
 
 async def main():
     browser = await launch()
     doc = await browser.newPage()
     await doc.goto("file://" + vim.eval("expand('%:p:r')") + ".html")
     html = await doc.content()
-    HTML(string = html.encode("utf-8")).write_pdf(vim.eval("expand('%:p:r')") + ".pdf")
+    HTML(string = html).write_pdf(vim.eval("expand('%:p:r')") + ".pdf", stylesheets = [CSS(string = '@page { size: ' + vim.eval("echo g:vim_mdtopdf_papersize") + '; }')], font_config = FontConfiguration())
     os.remove(vim.eval("expand('%:p:r')") + ".html")
     await browser.close()
 

@@ -1,0 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css");
+@import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css");
+
+@page {
+    margin: 0.5in;
+}
