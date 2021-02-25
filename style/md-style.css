@@ -1,12 +1,20 @@
+/*Import Microsoft's Markdown styling for VS Code*/
 @import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css");
 @import url("https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css");
 
+/*Set PDF settings*/
+@page {
+    size: letter;
+    margin: 0.5in;
+}
+
+/*Set default font*/
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
 	font-family: sans-serif;
 }
 
-@page {
-    size: letter;
-    margin: 0.5in;
+/*Ensure that math SVGs are aligned correctly*/
+mjx-container, mjx-container img {
+    vertical-align: middle;
 }
