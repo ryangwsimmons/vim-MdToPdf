@@ -2,8 +2,6 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"></script>
 <script>
     var mathjax_complete = false;
-    const mathjax_complete_event = new Event('mathjax_complete');
-    document.getElementsByTagName("body")[0].addEventListener('mathjax_complete', function(e) { mathjax_complete = true; }, false);
     window.MathJax = {
         loader: {
             load: ['input/tex-full', 'output/svg']
@@ -16,7 +14,7 @@
             ready: function() {
                 MathJax.startup.defaultReady();
                 MathJax.startup.promise.then(function() {
-                    document.getElementsByTagName("body")[0].dispatchEvent(mathjax_complete_event);
+                    mathjax_complete = true;
                 });
             }
         }

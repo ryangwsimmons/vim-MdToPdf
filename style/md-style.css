@@ -13,8 +13,3 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
 	font-family: sans-serif;
 }
-
-/*Ensure that math SVGs are aligned correctly*/
-mjx-container, mjx-container img {
-    vertical-align: middle;
-}
