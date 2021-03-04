@@ -9,6 +9,7 @@ Running the command the first time may take a few minutes, depending on your int
 ## Installation
 
 ### Dependencies
+- Python 3
 - A version of Vim compiled with Python 3 support (run `vim --version` to check this, if you see `+python3`, you're good)
 - The `lxml` Python module
 - The `pyppeteer` Python module
