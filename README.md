@@ -16,9 +16,9 @@ Running the command the first time may take a few minutes, depending on your int
 - [WeasyPrint](https://weasyprint.org/)
 - [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc)
 
-Clone the repo to the `pack/vendor/start/vim-MdToPdf` directory in your `.vim` folder. If you have another way of installing Vim plugins that you like to use, that'll probably work with this plugin too, however this is untested.
+Clone the repo to the `pack/plugins/start/vim-MdToPdf` directory in your `.vim` folder. If you have another way of installing Vim plugins that you like to use, that'll probably work with this plugin too, however this is untested.
 
 ## Configuration
-The plugin provides two global variables that you can redefine in your `.vimrc` file:
+The plugin provides one global variable that you can redefine in your `.vimrc` file:
 - `g:vim_mdtopdf_cssurl`: Used to define a path or URL for custom CSS (uses my own personal CSS file by default, which is a slight modification of the CSS that Microsoft uses for Markdown in VS Code)
     * You can also use this CSS file to specify your paper size, if you want to use something other than Letter paper
